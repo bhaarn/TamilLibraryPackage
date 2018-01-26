@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/parent_layout_common_margin">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView"
+        style="@style/ScrollViewStyle">
+
+        <LinearLayout
+            android:id="@+id/overall_parent"
+            style="@style/ParentLinearLayoutStyle">
+
+            <com.padhuga.tamillibrary.utils.BaseChildCardView
+                style="@style/ChildCardViewStyle"
+                android:layout_height="wrap_content">
+
+                <LinearLayout style="@style/LinearLayoutStyle">
+
+                    <com.padhuga.tamillibrary.utils.BaseTextView
+                        android:id="@+id/parent_title"
+                        style="@style/TextViewStyle"
+                        android:textAlignment="center" />
+
+                    <com.padhuga.tamillibrary.utils.BaseTextView
+                        android:id="@+id/parent_soothiram"
+                        style="@style/TextViewStyle"
+                        android:visibility="gone" />
+
+                    <com.padhuga.tamillibrary.utils.BaseTextView
+                        android:id="@+id/parent_content"
+                        style="@style/TextViewStyle" />
+
+                    <com.padhuga.tamillibrary.utils.BaseTextView
+                        android:id="@+id/parent_example"
+                        style="@style/TextViewStyle" />
+
+                </LinearLayout>
+
+            </com.padhuga.tamillibrary.utils.BaseChildCardView>
+
+            <com.padhuga.tamillibrary.utils.BaseChildCardView
+                style="@style/ChildCardViewStyle"
+                android:layout_height="wrap_content">
+
+                <LinearLayout style="@style/LinearLayoutStyle">
+
+                    <com.padhuga.tamillibrary.utils.BaseTextView
+                        android:id="@+id/child_title"
+                        style="@style/TextViewStyle" />
+
+                    <com.padhuga.tamillibrary.utils.BaseTextView
+                        android:id="@+id/child_soothiram"
+                        style="@style/TextViewStyle"
+                        android:visibility="gone" />
+
+                    <com.padhuga.tamillibrary.utils.BaseTextView
+                        android:id="@+id/child_content"
+                        style="@style/TextViewStyle" />
+
+                    <com.padhuga.tamillibrary.utils.BaseTextView
+                        android:id="@+id/child_example"
+                        style="@style/TextViewStyle" />
+
+                </LinearLayout>
+
+            </com.padhuga.tamillibrary.utils.BaseChildCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

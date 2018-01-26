@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.padhuga.tamillibrary.utils.BaseChildCardView
+        style="@style/ChildCardViewStyle"
+        android:layout_height="wrap_content">
+
+        <LinearLayout style="@style/LinearLayoutStyle">
+
+            <com.padhuga.tamillibrary.utils.BaseTextView
+                android:id="@+id/grand_child_title"
+                style="@style/TextViewStyle" />
+
+            <com.padhuga.tamillibrary.utils.BaseTextView
+                android:id="@+id/grand_child_soothiram"
+                style="@style/TextViewStyle"
+                android:visibility="gone" />
+
+            <com.padhuga.tamillibrary.utils.BaseTextView
+                android:id="@+id/grand_child_content"
+                style="@style/TextViewStyle" />
+
+            <com.padhuga.tamillibrary.utils.BaseTextView
+                android:id="@+id/grand_child_example"
+                style="@style/TextViewStyle" />
+
+        </LinearLayout>
+
+    </com.padhuga.tamillibrary.utils.BaseChildCardView>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="activities.MenuLogic"
+    android:layout_marginTop="@dimen/parent_layout_common_margin"
+    style="@style/ParentLinearLayoutStyle">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        style="@style/ScrollViewStyle">
+
+        <com.padhuga.tamillibrary.utils.BaseChildCardView
+            style="@style/ChildCardViewStyle"
+            android:layout_height="wrap_content">
+
+        <com.padhuga.tamillibrary.utils.BaseTextView
+            android:id="@+id/help_text"
+            style="@style/TextViewStyle" />
+
+        </com.padhuga.tamillibrary.utils.BaseChildCardView>
+
+    </ScrollView>
+
+</LinearLayout>
