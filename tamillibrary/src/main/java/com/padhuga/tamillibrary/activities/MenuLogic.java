@@ -38,7 +38,7 @@ public class MenuLogic  {
     private SharedPreferences sharedPref;
     private int progRess;
 
-    public ParentModel readJSONFromAssetsAndConvertTogson(Activity activity, String jsonFileName) {
+    ParentModel readJSONFromAssetsAndConvertTogson(Activity activity, String jsonFileName) {
         try {
             InputStream is = activity.getAssets().open(jsonFileName);
             int size = is.available();
@@ -55,7 +55,7 @@ public class MenuLogic  {
         return parentModel;
     }
 
-    public void shareApp(Activity activity, String appName, String subject, String desc) {
+    void shareApp(Activity activity, String appName, String subject, String desc) {
         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
@@ -63,19 +63,19 @@ public class MenuLogic  {
         activity.startActivity(Intent.createChooser(sharingIntent, "Share the application"));
     }
 
-    public void moreApps(Activity activity) {
+    void moreApps(Activity activity) {
         activity.startActivity(new Intent(
                 Intent.ACTION_VIEW,
                 Uri.parse(activity.getResources().getString(R.string.play_more_apps))));
     }
 
-    public void aboutUs(Activity activity) {
+    void aboutUs(Activity activity) {
         Fragment fragment = new AboutFragment();
         ((FragmentActivity)activity).getSupportFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment, fragment.getClass().getSimpleName()).addToBackStack(null).commit();
     }
 
-    public void rateApp(Activity activity, String appName) {
+    void rateApp(Activity activity, String appName) {
         try {
             activity.startActivity(new Intent(Intent.ACTION_VIEW,
                     Uri.parse(activity.getResources().getString(R.string.old_play_store)
@@ -88,13 +88,13 @@ public class MenuLogic  {
         }
     }
 
-    public void showHelp(Activity activity) {
+    void showHelp(Activity activity) {
         Fragment fragment = new HelpFragment();
         ((FragmentActivity)activity).getSupportFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment, fragment.getClass().getSimpleName()).addToBackStack(null).commit();
     }
 
-    public void handleIntent(Activity activity, Intent intent) {
+    void handleIntent(Activity activity, Intent intent) {
 
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
@@ -107,7 +107,7 @@ public class MenuLogic  {
         }
     }
 
-    public void performSearch(Activity activity, MenuItem item) {
+    void performSearch(Activity activity, MenuItem item) {
         openKeyboardPreference(activity);
         SearchManager searchManager =
                 (SearchManager) activity.getSystemService(Context.SEARCH_SERVICE);
@@ -132,7 +132,7 @@ public class MenuLogic  {
         Log.i("inside onStart", "after ever");
     }
 
-    public void changeFont(final Activity activity) {
+    void changeFont(final Activity activity) {
         final AlertDialog.Builder fontSizeSelectorDialog = new AlertDialog.Builder(activity);
         final SeekBar fontSizeSetter = new SeekBar(activity);
         fontSizeSetter.setMax(Integer.parseInt(activity.getResources().getString(R.string.font_size_max)));  // 14 18 22
@@ -178,7 +178,7 @@ public class MenuLogic  {
         fontSizeSelectorDialog.show();
     }
 
-    public void ChangeTheme(Activity activity) {
+    void ChangeTheme(Activity activity) {
         Intent intent = new Intent(activity, PrefsActivity.class);
         activity.startActivityForResult(intent, 1);
     }

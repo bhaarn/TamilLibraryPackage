@@ -30,7 +30,7 @@ public class SearchFragment extends Fragment {
         String query = getArguments() != null ? getArguments().getString(Constants.ARG_QUERY_TEXT):null;
         final List<String> queryResults = new ArrayList<>();
         MenuLogic menuLogic = new MenuLogic();
-        ParentModel parentModel = menuLogic.readJSONFromAssetsAndConvertTogson(getActivity(), "data.json");
+        ParentModel parentModel = menuLogic.readJSONFromAssetsAndConvertTogson(getActivity(), BaseActivity.jsonFileName);
         searchRetriever = showSearchResults(parentModel, query);
         for(int titleIndex = 0;titleIndex < searchRetriever.size(); titleIndex++) {
             queryResults.add(titleIndex, searchRetriever.get(titleIndex).getTitle());

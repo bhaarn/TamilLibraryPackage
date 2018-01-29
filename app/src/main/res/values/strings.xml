@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TamilLibraryPackage</string>
     <string name="json_file_name">data.json</string>
+    <string name="json_file_name_key">JsonFileName</string>
 </resources>

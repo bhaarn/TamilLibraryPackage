@@ -10,4 +10,5 @@ public class Constants {
     public static final String PREF_THEME_CHANGE = "change_theme";
 
     public static final String ARG_QUERY_TEXT = "query_text";
+    public static final String ARG_JSON_FILE_NAME = "JsonFileName";
 }
