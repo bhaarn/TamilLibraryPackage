@@ -10,15 +10,17 @@ import com.padhuga.tamillibrary.models.ParentModel;
 public class SectionPagerAdapter extends FragmentPagerAdapter {
 
     private final ParentModel parentModel;
+    private final int listType;
 
-    public SectionPagerAdapter(FragmentManager fm, ParentModel parentModel) {
+    public SectionPagerAdapter(FragmentManager fm, ParentModel parentModel, int listType) {
         super(fm);
         this.parentModel = parentModel;
+        this.listType = listType;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return MainFragment.newInstance(position);
+        return MainFragment.newInstance(listType, position);
     }
 
     @Override

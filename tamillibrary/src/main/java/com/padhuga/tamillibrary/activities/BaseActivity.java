@@ -16,6 +16,7 @@ public class BaseActivity extends AppCompatActivity {
 
     private MenuLogic menuLogic;
     static String jsonFileName;
+    static String listType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class BaseActivity extends AppCompatActivity {
         menuLogic = new MenuLogic();
         if(getIntent() != null) {
             jsonFileName = getIntent().getExtras().getString(Constants.ARG_JSON_FILE_NAME);
+            listType = getIntent().getExtras().getString(Constants.ARG_LIST_TYPE);
             if(jsonFileName != null){
                 ParentModel parentModel = menuLogic.readJSONFromAssetsAndConvertTogson(this, jsonFileName);
             }

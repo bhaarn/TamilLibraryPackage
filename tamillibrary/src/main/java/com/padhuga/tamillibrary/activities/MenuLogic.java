@@ -32,7 +32,7 @@ import java.util.Locale;
 
 import static android.content.Context.INPUT_METHOD_SERVICE;
 
-public class MenuLogic  {
+class MenuLogic  {
 
     static ParentModel parentModel;
     private SharedPreferences sharedPref;

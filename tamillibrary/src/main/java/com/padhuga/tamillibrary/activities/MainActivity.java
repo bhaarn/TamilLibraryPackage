@@ -27,7 +27,7 @@ public class MainActivity extends BaseActivity {
     private void Initialize(Activity activity) {
         initializeAds();
 
-        SectionPagerAdapter mSectionsPagerAdapter = new SectionPagerAdapter(((FragmentActivity)activity).getSupportFragmentManager(), parentModel);
+        SectionPagerAdapter mSectionsPagerAdapter = new SectionPagerAdapter(((FragmentActivity)activity).getSupportFragmentManager(), parentModel, Integer.parseInt(listType));
         ViewPager mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
@@ -40,7 +40,7 @@ public class MainActivity extends BaseActivity {
         AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice("66E56BD85B959A0701EA3C5F7D32E19D")
+                .addTestDevice("2818610EB6FDBC046DB14EFB8EE05FEE")
                 .build();
         mAdView.loadAd(adRequest);
         Boolean b = adRequest.isTestDevice(this);

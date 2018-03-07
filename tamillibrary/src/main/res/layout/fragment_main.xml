@@ -4,18 +4,25 @@
     android:paddingBottom="@dimen/parent_layout_common_margin">
 
     <com.padhuga.tamillibrary.utils.BaseParentCardView
-        style="@style/ParentCardViewStyle">
+        style="@style/ParentCardViewStyle"
+        android:visibility="gone">
 
         <ExpandableListView
             android:id="@+id/expandableListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            style="@style/ExpandableListViewStyle"
+            android:visibility="gone"/>
 
     </com.padhuga.tamillibrary.utils.BaseParentCardView>
 
-    <com.padhuga.tamillibrary.utils.BaseTextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <com.padhuga.tamillibrary.utils.BaseParentCardView
+        style="@style/ParentCardViewStyle"
+        >
+
+        <ListView
+            android:id="@android:id/list"
+            style="@style/ListViewStyle"
+            />
+
+    </com.padhuga.tamillibrary.utils.BaseParentCardView>
 
 </RelativeLayout>
